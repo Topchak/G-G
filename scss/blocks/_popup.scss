@@ -1,0 +1,179 @@
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 3000;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+
+    .popup__overlay {
+      opacity: 1;
+    }
+
+    .popup__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__content {
+    position: relative;
+    background: #1c2030f4;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    z-index: 1;
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    @media (max-width: 479px) {
+      padding: 20px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    color: #bfbfbf;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    outline: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__concert {
+    font-weight: 600;
+    font-size: 18px;
+    animation: wawe 2s ease infinite;
+    margin: 10px 0;
+  }
+
+  &__info {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #929292;
+  }
+
+  &__details {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 6px;
+
+      @media (max-width: 479px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__form {
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dddddd2b;
+      border-radius: 6px;
+      background: #0d0f14;
+      outline: none;
+
+      &:focus {
+        border-color: #777;
+      }
+    }
+  }
+
+  &__policy {
+    font-size: 12px;
+    color: #777;
+    margin-top: 12px;
+  }
+}
+
+/* Анимация */
+@keyframes wawe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Кнопка внутри popup */
+.button-popup {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* Список концертов */
+.concert-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+
+  li {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: #2c3247;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+
+    @media (min-width: 767px) {
+      &:hover {
+        background: #1a1d2a;
+        border: 1px solid #dbdcdf19;
+      }
+    }
+  }
+}
+
+
+
+.form-error {
+  color: #ff4d4f;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.form-group-detail {
+  min-height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 5px 0;
+  color: red;
+}

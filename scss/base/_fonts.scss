@@ -1,0 +1,55 @@
+
+/* (Regular) */
+@font-face {
+  font-family: "MainFont";        // TODO: переименуй под свой шрифт
+  src:
+    local("MainFont Regular"),
+    url("../fonts/MainFont-Regular.woff2") format("woff2"),
+    url("../fonts/MainFont-Regular.woff") format("woff");
+  font-weight: 400;               // обычный
+  font-style: normal;
+  font-display: swap;
+}
+
+/* (Medium) */
+@font-face {
+  font-family: "MainFont";
+  src:
+    local("MainFont Medium"),
+    url("../fonts/MainFont-Medium.woff2") format("woff2"),
+    url("../fonts/MainFont-Medium.woff") format("woff");
+  font-weight: 500;               // medium
+  font-style: normal;
+  font-display: swap;
+}
+
+/*  (Bold) */
+@font-face {
+  font-family: "MainFont";
+  src:
+    local("MainFont Bold"),
+    url("../fonts/MainFont-Bold.woff2") format("woff2"),
+    url("../fonts/MainFont-Bold.woff") format("woff");
+  font-weight: 700;               
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Second font */
+
+
+
+/* (Regular) */
+
+
+@font-face {
+  font-family: "AccentFont";      // TODO: если нужен доп. шрифт
+  src:
+    local("AccentFont Regular"),
+    url("../fonts/AccentFont-Regular.woff2") format("woff2"),
+    url("../fonts/AccentFont-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

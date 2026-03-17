@@ -1,0 +1,25 @@
+:root {
+
+  --font-main: "MainFont", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-accent: "AccentFont", "MainFont", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-text: #fff;
+  --color-black: #000;
+  --color-accent: #ffcc00;
+  --color-header: #fff;
+  --bg-header: #0e0e12;
+  --bg-color-black: #0a0a0c;
+
+  --link-hero-bg-color: #fade28;
+  --link-hero-hover: #fafa35;
+
+  --link-main-bg-color: #084a17;
+  --link-main-bg-hover: #0b9114;
+
+  --bg-card: #1b1e28;
+
+}
+
+$z-header: 10;
+$z-modal: 50;
+$z-popup: 100;

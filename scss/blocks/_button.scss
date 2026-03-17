@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.button--hero {
+  color: var(--color-black);
+  background-color: var(--link-hero-bg-color);
+  box-shadow: 0 4px 6px rgba(225, 237, 2, 0.527);
+  transition: 0.3s ease;
+
+  @media (min-width:767px) {
+    &:hover {
+      background-color: var(--link-hero-hover);
+    }
+  }
+
+
+}
+
+.button--main,
+.button--main-contacts {
+  color: var(--color-text);
+  background-color: var(--link-main-bg-color);
+  text-transform: none;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.4rem;
+  transition: 0.3s ease;
+  outline: none;
+
+  @media (min-width:767px) {
+    &:hover {
+      background-color: var(--link-main-bg-hover);
+    }
+  }
+
+
+}
